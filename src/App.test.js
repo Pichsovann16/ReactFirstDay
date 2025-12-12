@@ -1,8 +1,14 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+jest.mock('./components/api/tmdb', () => ({
+  getPopularMovies: jest.fn(() => Promise.resolve({ results: [] })),
+  getMovieDetails: jest.fn(() => Promise.resolve({})),
+  getPosterUrl: jest.fn(() => null),
+}));
+
+test('renders app header', async () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/movie db/i)).toBeInTheDocument();
+  await screen.findByText(/showing/i);
 });
