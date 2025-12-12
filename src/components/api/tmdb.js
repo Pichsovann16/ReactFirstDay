@@ -1,8 +1,9 @@
+const REACT_APP_TMDB_API_KEY = "11a3f85c405ec2580bb40a327c724d64";
 const TMDB_BASE_URL = "https://api.themoviedb.org/3";
 const TMDB_IMAGE_BASE_URL = "https://image.tmdb.org/t/p/";
 
 function getApiKey() {
-  const key = process.env.REACT_APP_TMDB_API_KEY;
+  const key = REACT_APP_TMDB_API_KEY;
   if (!key) {
     throw new Error(
       "Missing TMDB API key. Create a .env file with REACT_APP_TMDB_API_KEY=YOUR_KEY and restart the dev server."
