@@ -6,7 +6,7 @@ function getApiKey() {
   const key = REACT_APP_TMDB_API_KEY;
   if (!key) {
     throw new Error(
-      "Missing TMDB API key. Create a .env file with REACT_APP_TMDB_API_KEY=YOUR_KEY and restart the dev server."
+      "Missing TMDB API key."
     );
   }
   return key;

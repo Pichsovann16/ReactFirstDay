@@ -1,6 +1,6 @@
 # Movie DB (React)
 
-[View the site]()
+[View the site](https://react-first-day.vercel.app/)
 
 ## Features
 - Movie list (popular movies) with poster, title, release date, rating
